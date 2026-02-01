@@ -264,9 +264,9 @@ export function InsideTheMachineSection() {
 
                                 {/* Monday.com CTA at the top of collapsible content */}
                                 <div className="max-w-5xl mx-auto pt-6">
-                                    <div className="mb-8 flex justify-center">
+                                    <div className="mb-8 flex justify-center gap-3 flex-wrap md:flex-nowrap">
                                         <a
-                                            href="https://shigerubt.monday.com/"
+                                            href="https://view.monday.com/18392494343-cd67ead115f03bf7600feba0efa5fe45?r=use1&is_sharable_link=true"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             aria-label="Organización del equipo en Monday Dev"
@@ -274,6 +274,17 @@ export function InsideTheMachineSection() {
                                         >
                                             <Network size={18} className="text-[#1F9E8A]" />
                                             <span className="text-sm font-medium">Organización del equipo en Monday Dev</span>
+                                            <ArrowRight size={14} className="opacity-70" />
+                                        </a>
+                                        <a
+                                            href="https://view.monday.com/18392505624-da1ee289ba2c692515d016430125f1c8?r=use1&is_sharable_link=true"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Tarea de los equipos"
+                                            className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:text-white hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] transition-colors bg-white/5"
+                                        >
+                                            <Network size={18} className="text-[#1F9E8A]" />
+                                            <span className="text-sm font-medium">Tarea de los equipos</span>
                                             <ArrowRight size={14} className="opacity-70" />
                                         </a>
                                     </div>
