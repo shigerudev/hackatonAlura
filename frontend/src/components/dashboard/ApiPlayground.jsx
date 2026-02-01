@@ -4,27 +4,54 @@ import { apiFetch } from '../../utils/api';
 export default function ApiPlayground() {
   const [endpoint, setEndpoint] = useState('/churn/predict');
   const [method, setMethod] = useState('POST');
-  const [requestBody, setRequestBody] = useState(`{
-  "gender": "Male",
-  "seniorCitizen": 0,
-  "partner": "Yes",
-  "dependents": "No",
-  "tenure": 12,
-  "phoneService": "Yes",
-  "multipleLines": "No",
-  "internetService": "Fiber optic",
-  "onlineSecurity": "No",
-  "onlineBackup": "Yes",
-  "deviceProtection": "No",
-  "techSupport": "No",
-  "streamingTV": "Yes",
-  "streamingMovies": "No",
-  "contract": "Month-to-month",
-  "paperlessBilling": "Yes",
-  "paymentMethod": "Electronic check",
-  "monthlyCharges": 70.35,
-  "totalCharges": 845.20
-}`);
+  // Muestras validadas segun backend ChurnRequest (nombres y tipos exactos)
+  const samples = {
+    cancela: JSON.stringify({
+      gender: 'Female',
+      SeniorCitizen: 1,
+      Partner: 'No',
+      Dependents: 'No',
+      tenure: 1,
+      PhoneService: 'Yes',
+      MultipleLines: 'No',
+      InternetService: 'Fiber optic',
+      OnlineSecurity: 'No',
+      OnlineBackup: 'No',
+      DeviceProtection: 'No',
+      TechSupport: 'No',
+      StreamingTV: 'Yes',
+      StreamingMovies: 'Yes',
+      Contract: 'Month-to-month',
+      PaperlessBilling: 'Yes',
+      PaymentMethod: 'Electronic check',
+      MonthlyCharges: 95.7,
+      TotalCharges: 95.7
+    }, null, 2),
+    noCancela: JSON.stringify({
+      gender: 'Male',
+      SeniorCitizen: 0,
+      Partner: 'Yes',
+      Dependents: 'Yes',
+      tenure: 72,
+      PhoneService: 'Yes',
+      MultipleLines: 'Yes',
+      InternetService: 'DSL',
+      OnlineSecurity: 'Yes',
+      OnlineBackup: 'Yes',
+      DeviceProtection: 'Yes',
+      TechSupport: 'Yes',
+      StreamingTV: 'No',
+      StreamingMovies: 'No',
+      Contract: 'Two year',
+      PaperlessBilling: 'No',
+      PaymentMethod: 'Bank transfer (automatic)',
+      MonthlyCharges: 45.3,
+      TotalCharges: 3250.8
+    }, null, 2)
+  };
+
+  const [sampleKey, setSampleKey] = useState('cancela');
+  const [requestBody, setRequestBody] = useState(samples.cancela);
   const [responseBody, setResponseBody] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -100,7 +127,24 @@ export default function ApiPlayground() {
               placeholder="/churn/predict"
             />
           </div>
-          <label className="block text-sm text-gray-400 mb-2">Request JSON</label>
+          <div className="flex items-center justify-between mb-2">
+            <label className="block text-sm text-gray-400">Request JSON</label>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-400">Ejemplo:</span>
+              <select
+                className="bg-black/30 border border-white/10 rounded-lg px-2 py-1 text-xs"
+                value={sampleKey}
+                onChange={(e) => {
+                  const k = e.target.value;
+                  setSampleKey(k);
+                  setRequestBody(samples[k]);
+                }}
+              >
+                <option value="cancela">Va a cancelar</option>
+                <option value="noCancela">No cancela</option>
+              </select>
+            </div>
+          </div>
           <textarea
             className="w-full h-[360px] bg-black/40 border border-white/10 rounded-xl p-3 font-mono text-sm text-white resize-none"
             value={requestBody}
