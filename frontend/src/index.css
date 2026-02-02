@@ -14,3 +14,22 @@
     color: white;
   }
 }
+
+/* API Playground dropdown hover tweaks */
+@layer components {
+  /* When hovering the select control or its options, make text black for contrast */
+  .api-playground select:hover {
+    color: #000;
+  }
+  .api-playground select:focus {
+    /* keep text black while open/focused */
+    color: #000;
+  }
+  /* Browsers vary in support, but this helps where allowed */
+  .api-playground select option:hover {
+    color: #000 !important;
+  }
+  .api-playground select option:checked {
+    color: #000;
+  }
+}

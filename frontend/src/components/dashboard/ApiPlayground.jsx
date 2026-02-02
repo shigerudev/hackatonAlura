@@ -100,7 +100,7 @@ export default function ApiPlayground() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="api-playground w-full max-w-7xl mx-auto">
       <header className="mb-8">
         <h1 className="text-3xl font-bold">API Playground</h1>
         <p className="text-gray-400 mt-1">Prueba endpoints del backend con un editor JSON simple.</p>
@@ -110,7 +110,7 @@ export default function ApiPlayground() {
         <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
           <div className="flex items-center gap-3 mb-4">
             <select
-              className="bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm"
+              className="bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm hover:text-black"
               value={method}
               onChange={(e) => setMethod(e.target.value)}
             >
@@ -132,7 +132,7 @@ export default function ApiPlayground() {
             <div className="flex items-center gap-2">
               <span className="text-xs text-gray-400">Ejemplo:</span>
               <select
-                className="bg-black/30 border border-white/10 rounded-lg px-2 py-1 text-xs"
+                className="bg-black/30 border border-white/10 rounded-lg px-2 py-1 text-xs hover:text-black"
                 value={sampleKey}
                 onChange={(e) => {
                   const k = e.target.value;
