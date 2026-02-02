@@ -110,7 +110,7 @@ export default function ApiPlayground() {
         <div className="bg-white/5 border border-white/10 rounded-2xl p-4">
           <div className="flex items-center gap-3 mb-4">
             <select
-              className="bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm hover:text-black"
+              className="bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white"
               value={method}
               onChange={(e) => setMethod(e.target.value)}
             >
@@ -132,7 +132,7 @@ export default function ApiPlayground() {
             <div className="flex items-center gap-2">
               <span className="text-xs text-gray-400">Ejemplo:</span>
               <select
-                className="bg-black/30 border border-white/10 rounded-lg px-2 py-1 text-xs hover:text-black"
+                className="bg-black/30 border border-white/10 rounded-lg px-2 py-1 text-xs text-white"
                 value={sampleKey}
                 onChange={(e) => {
                   const k = e.target.value;
