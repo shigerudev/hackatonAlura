@@ -8,14 +8,14 @@ import {
     SiReact, SiVite, SiTailwindcss, SiFramer, SiMysql, SiApachemaven, SiStreamlit, SiPostman, SiInsomnia, SiSwagger 
 } from 'react-icons/si';
 import insightBot from '../assets/insight-bot.png';
-import aguedaImg from '../profile pictures/Agueda_Guzman.jpeg';
-import roxiImg from '../profile pictures/rox_b.jpeg';
-import hugoImg from '../profile pictures/hugo.jpeg';
-import kevinImg from '../profile pictures/kevin_m.jpeg';
-import gabrielImg from '../profile pictures/gab_franco.jpeg';
-import heribertoImg from '../profile pictures/heri_turpo.jpeg';
-import jhonImg from '../profile pictures/jhon_alonzo.jpeg';
-import vaneImg from '../profile pictures/vane.jpeg';
+import aguedaImg from '../../profile pictures/Agueda.jpeg';
+import roxiImg from '../../profile pictures/Roxi.jpeg';
+import hugoImg from '../../profile pictures/Hugo.jpg';
+import kevinImg from '../../profile pictures/Kevin.jpeg';
+import gabrielImg from '../../profile pictures/Gabriel.jpeg';
+import heribertoImg from '../../profile pictures/Heriberto.jpg';
+import jhonImg from '../../profile pictures/Jhon.jpeg';
+import vaneImg from '../../profile pictures/Vane.jpeg';
 // Minimal SVG flags (approximate) for team nationality badges
 function FlagIcon({ code, size = 16 }) {
     const w = size;
