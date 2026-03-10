@@ -1,0 +1,29 @@
+
+> temp_app@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 2745 modules transformed.
+Ô£ù Build failed in 4.88s
+error during build:
+src/pages/LandingPage.jsx (5:9): "OperatingBrainSection" is not exported by "src/pages/LandingSections.jsx", imported by "src/pages/LandingPage.jsx".
+file: C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/src/pages/LandingPage.jsx:5:9
+
+3: import { ArrowRight } from 'lucide-react';
+4: import logo from '../assets/Churn Alert Shield.png';
+5: import { OperatingBrainSection, ApiIntegrationSection, RoiSection, TeamSection, CtaSection, InsideTheMachineSection }...
+            ^
+6: 
+7: export default function LandingPage({ onLaunch }) {
+
+    at getRollupError (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17022:16)
+    at Module.traceVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17478:29)
+    at ModuleScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:15141:39)
+    at FunctionScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at FunctionBodyScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at Identifier.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5462:40)
+    at CallExpression.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)
+    at CallExpression.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:12172:15)

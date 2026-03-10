@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "result": [
+    {
+      "projectId": "shigerudev-515b1",
+      "projectNumber": "1002181728022",
+      "displayName": "shigerudev",
+      "name": "projects/shigerudev-515b1",
+      "resources": {
+        "hostingSite": "shigerudev-515b1"
+      },
+      "state": "ACTIVE",
+      "etag": "1_1d92b922-06bd-46cf-b34c-5242e55d18b4"
+    }
+  ]
+}

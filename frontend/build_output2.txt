@@ -1,0 +1,29 @@
+
+> temp_app@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mÔ£ô[39m 2745 modules transformed.
+Ô£ù Build failed in 4.50s
+error during build:
+src/pages/LandingSections.jsx (8:117): "SiMondaydotcom" is not exported by "node_modules/react-icons/si/index.mjs", imported by "src/pages/LandingSections.jsx".
+file: C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/src/pages/LandingSections.jsx:8:117
+
+ 6: import { 
+ 7:     SiPython, SiFlask, SiScikitlearn, SiPandas, SiOpenjdk, SiSpring, SiOpenapiinitiative, SiDocker, 
+ 8:     SiReact, SiVite, SiTailwindcss, SiFramer, SiMysql, SiApachemaven, SiStreamlit, SiPostman, SiInsomnia, SiSwagger, SiMondaydo...
+                                                                                                                         ^
+ 9: } from 'react-icons/si';
+10: import insightBot from '../assets/insight-bot.png';
+
+    at getRollupError (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at Module.error (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17022:16)
+    at Module.traceVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:17478:29)
+    at ModuleScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:15141:39)
+    at FunctionScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at FunctionBodyScope.findVariable (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5688:38)
+    at Identifier.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:5462:40)
+    at CallExpression.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)
+    at CallExpression.bind (file:///C:/Users/hugow/OneDrive/Escritorio/AluraHackaton/hackatonAlura/frontend/node_modules/rollup/dist/es/shared/node-entry.js:12172:15)

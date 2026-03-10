@@ -5,17 +5,10 @@ import { Button } from '../components/ui/Button';
 import { Terminal, Cpu, Database, Network, TrendingUp, Users, ArrowRight, Github, Linkedin, CalendarCheck, Code2, Lock, Zap, ChevronDown, Activity, Server, Scale, Mic } from 'lucide-react';
 import { 
     SiPython, SiFlask, SiScikitlearn, SiPandas, SiOpenjdk, SiSpring, SiOpenapiinitiative, SiDocker, 
-    SiReact, SiVite, SiTailwindcss, SiFramer, SiMysql, SiApachemaven, SiStreamlit, SiPostman, SiInsomnia, SiSwagger 
+    SiReact, SiVite, SiTailwindcss, SiFramer, SiMysql, SiApachemaven, SiStreamlit, SiPostman, SiInsomnia, SiSwagger, SiMondaydotcom 
 } from 'react-icons/si';
 import insightBot from '../assets/insight-bot.png';
-import aguedaImg from '../profile pictures/Agueda_Guzman.jpeg';
-import roxiImg from '../profile pictures/rox_b.jpeg';
-import hugoImg from '../profile pictures/hugo.jpeg';
-import kevinImg from '../profile pictures/kevin_m.jpeg';
-import gabrielImg from '../profile pictures/gab_franco.jpeg';
-import heribertoImg from '../profile pictures/heri_turpo.jpeg';
-import jhonImg from '../profile pictures/jhon_alonzo.jpeg';
-import vaneImg from '../profile pictures/vane.jpeg';
+
 // Minimal SVG flags (approximate) for team nationality badges
 function FlagIcon({ code, size = 16 }) {
     const w = size;
@@ -53,122 +46,136 @@ function FlagIcon({ code, size = 16 }) {
                     <rect width="3" height="0.5" x="0" y="1.5" fill="#CE1126" />
                 </svg>
             );
-    }
-}
-export function TeamSection() {
-    const team = [
-        {
-            name: "Hugo Arias",
-            role: "Project Manager & Backend Lead",
-            image: hugoImg,
-            linkedin: "https://www.linkedin.com/in/shigerubt/",
-            github: "https://github.com/shigerubt",
-            flagCode: "GT",
-        },
-        {
-            name: "Agueda J. Guzman",
-            role: "Backend Manager",
-            image: aguedaImg,
-            linkedin: "https://www.linkedin.com/in/agueda-talavera-42a2a42a5/",
-            flagCode: "MX",
-        },
-        {
-            name: "Jhon A. Alonzo Huamán",
-            role: "DS Strategy Manager",
-            image: jhonImg,
-            linkedin: "https://www.linkedin.com/in/jalonzoh/",
-            flagCode: "PE",
-        },
-        {
-            name: "Heriberto Turpo Quiro",
-            role: "Data Scientist",
-            image: heribertoImg,
-            linkedin: "https://www.linkedin.com/in/heriberto-turpo-quiro/",
-            flagCode: "PE",
-        },
-        {
-            name: "Gabriel Franco",
-            role: "Pitch Speaker",
-            image: gabrielImg,
-            linkedin: "https://www.linkedin.com/in/lgab/",
-            flagCode: "CO",
-        },
-        {
-            name: "Roxana Z. Bautista",
-            role: "Backend Engineer",
-            image: roxiImg,
-            linkedin: "https://www.linkedin.com/in/roxana-zaricell-bautista-lopez-651a5526b/",
-            flagCode: "MX",
-        },
-        {
-            name: "Vanessa S. Angulo",
-            role: "Backend Engineer",
-            image: vaneImg,
-            linkedin: "https://www.linkedin.com/in/vanessaangulose/",
-            flagCode: "MX",
-        },
-        {
-            name: "Kevin S. Morales",
-            role: "Backend Engineer",
-            image: kevinImg,
-            linkedin: "https://www.linkedin.com/in/kevin-morales-6431b72a2",
-            flagCode: "CO",
-        },
-    ];
+        export function TeamSection() {
+            const team = [
+                {
+                    name: "Hugo Arias",
+                    role: "Project Manager & Backend Lead",
+                    image: hugoImg,
+                    linkedin: "https://www.linkedin.com/in/shigerubt/",
+                    github: "https://github.com/shigerubt",
+                    flagCode: "GT",
+                },
+                {
+                    name: "Agueda J. Guzman",
+                    role: "Backend Manager",
+                    image: aguedaImg,
+                    linkedin: "https://www.linkedin.com/in/agueda-talavera-42a2a42a5/",
+                    flagCode: "MX",
+                },
+                {
+                    name: "Jhon A. Alonzo Huamán",
+                    role: "DS Strategy Manager",
+                    image: jhonImg,
+                    linkedin: "https://www.linkedin.com/in/jalonzoh/",
+                    flagCode: "PE",
+                },
+                {
+                    name: "Heriberto Turpo Quiro",
+                    role: "Data Scientist",
+                    image: heribertoImg,
+                    linkedin: "https://www.linkedin.com/in/heriberto-turpo-quiro/",
+                    flagCode: "PE",
+                },
+                {
+                    name: "Gabriel Franco",
+                    role: "Pitch Speaker",
+                    image: gabrielImg,
+                    linkedin: "https://www.linkedin.com/in/lgab/",
+                    flagCode: "CO",
+                },
+                {
+                    name: "Roxana Z. Bautista",
+                    role: "Backend Engineer",
+                    image: roxiImg,
+                    linkedin: "https://www.linkedin.com/in/roxana-zaricell-bautista-lopez-651a5526b/",
+                    flagCode: "MX",
+                },
+                {
+                    name: "Vanessa S. Angulo",
+                    role: "Backend Engineer",
+                    image: vaneImg,
+                    linkedin: "https://www.linkedin.com/in/vanessaangulose/",
+                    flagCode: "MX",
+                },
+                {
+                    name: "Kevin S. Morales",
+                    role: "Backend Engineer",
+                    image: kevinImg,
+                    linkedin: "https://www.linkedin.com/in/kevin-morales-6431b72a2",
+                    flagCode: "CO",
+                },
+            ];
 
-    return (
-        <section className="py-24 px-6 border-t border-white/5 bg-navy-deep">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-white mb-4">Meet the Sentinels</h2>
-                    <p className="text-gray-400">Los arquitectos detrás de la predicción y los guardianes de la retención.</p>
-                </div>
+            return (
+                <section className="py-24 px-6 border-t border-white/5 bg-navy-deep">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl font-bold text-white mb-4">Meet the Sentinels</h2>
+                            <p className="text-gray-400">Los arquitectos detrás de la predicción y los guardianes de la retención.</p>
+                        </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {team.map((member, idx) => (
-                        <Card key={idx} className="group p-6 text-center border-white/5 hover:border-neon-cyan/50 transition-colors">
-                            <div className="w-20 h-20 mx-auto rounded-full bg-white/5 mb-6 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-neon-cyan transition-colors relative">
-                                {member.image ? (
-                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                                ) : (
-                                    <Users className="text-gray-500 group-hover:text-neon-cyan" size={28} />
-                                )}
-                                {member.role === 'Pitch Speaker' && (
-                                    <span className="absolute -bottom-1 -right-1 p-1 rounded-full bg-white/10 border border-neon-cyan/40 text-neon-cyan shadow">
-                                        <Mic size={12} />
-                                    </span>
-                                )}
-                            </div>
-                            <h3 className="text-sm font-bold text-white leading-tight h-10 flex items-center justify-center gap-2">
-                                <span>{member.name}</span>
-                                {member.flagCode && (
-                                    <span className="inline-flex items-center"><FlagIcon code={member.flagCode} size={14} /></span>
-                                )}
-                            </h3>
-                            <p className="text-[10px] text-neon-cyan mt-1 mb-4 uppercase tracking-widest font-mono flex items-center justify-center gap-1">
-                                {member.role === 'Pitch Speaker' && <Mic size={12} className="text-neon-cyan" />}
-                                <span>{member.role === 'Pitch Speaker' ? 'Data Scientist • Pitch Speaker' : member.role}</span>
-                            </p>
-                            <div className="flex justify-center gap-4 text-gray-400">
-                                {member.github && (
-                                    <a href={member.github} target="_blank" rel="noopener noreferrer">
-                                        <Github size={16} className="hover:text-white transition-colors" />
-                                    </a>
-                                )}
-                                {member.linkedin && (
-                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                                        <Linkedin size={16} className="hover:text-white transition-colors" />
-                                    </a>
-                                )}
-                            </div>
-                        </Card>
-                    ))}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {team.map((member, idx) => (
+                                <Card key={idx} className="group p-6 text-center border-white/5 hover:border-neon-cyan/50 transition-colors">
+                                    <div className="w-20 h-20 mx-auto rounded-full bg-white/5 mb-6 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-neon-cyan transition-colors relative">
+                                        {member.image ? (
+                                            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                        ) : (
+                                            <Users className="text-gray-500 group-hover:text-neon-cyan" size={28} />
+                                        )}
+                                        {member.role === 'Pitch Speaker' && (
+                                            <span className="absolute -bottom-1 -right-1 p-1 rounded-full bg-white/10 border border-neon-cyan/40 text-neon-cyan shadow">
+                                                <Mic size={12} />
+                                            </span>
+                                        )}
+                                    </div>
+                                    <h3 className="text-sm font-bold text-white leading-tight h-10 flex items-center justify-center gap-2">
+                                        <span>{member.name}</span>
+                                        {member.flagCode && (
+                                            <span className="inline-flex items-center"><FlagIcon code={member.flagCode} size={14} /></span>
+                                        )}
+                                    </h3>
+                                    <p className="text-[10px] text-neon-cyan mt-1 mb-4 uppercase tracking-widest font-mono flex items-center justify-center gap-1">
+                                        {member.role === 'Pitch Speaker' && <Mic size={12} className="text-neon-cyan" />}
+                                        <span>{member.role === 'Pitch Speaker' ? 'Data Scientist • Pitch Speaker' : member.role}</span>
+                                    </p>
+                                    <div className="flex justify-center gap-4 text-gray-400">
+                                        {member.github && (
+                                            <a href={member.github} target="_blank" rel="noopener noreferrer">
+                                                <Github size={16} className="hover:text-white transition-colors" />
+                                            </a>
+                                        )}
+                                        {member.linkedin && (
+                                            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                                                <Linkedin size={16} className="hover:text-white transition-colors" />
+                                            </a>
+                                        )}
+                                    </div>
+                                </Card>
+                            ))}
+                        </div>
+
+                        {/* Monday.com CTA moved to InsideTheMachineSection */}
+                    </div>
+                </section>
+            );
+        }
+
+        export function InsideTheMachineSection() {
+            const [isOpen, setIsOpen] = useState(false);
+            return (
+                <section className="relative px-6">
+                    <div className="max-w-7xl mx-auto flex flex-col items-center">
+                            <div className="p-2 rounded bg-neon-cyan/10 text-neon-cyan"><Code2 size={18} /></div>
+                            <span>Zero-downtime integration</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
     );
 }
-
 
 export function RoiSection() {
     return (
@@ -210,6 +217,117 @@ export function RoiSection() {
     );
 }
 
+export function TeamSection() {
+    const team = [
+        { 
+            name: "Hugo Arias", 
+            role: "Project Manager & Backend Lead", 
+            image: hugoImg,
+            linkedin: "https://www.linkedin.com/in/shigerubt/",
+            github: "https://github.com/shigerubt",
+            flagCode: "GT"
+        },
+        { 
+            name: "Agueda J. Guzman", 
+            role: "Backend Manager", 
+            image: aguedaImg,
+            linkedin: "https://www.linkedin.com/in/agueda-talavera-42a2a42a5/", 
+            flagCode: "MX"
+        },
+        { 
+            name: "Jhon A. Alonzo Huamán", 
+            role: "DS Strategy Manager", 
+            image: jhonImg,
+            linkedin: "https://www.linkedin.com/in/jalonzoh/", 
+            flagCode: "PE"
+        },
+        { 
+            name: "Heriberto Turpo Quiro", 
+            role: "Data Scientist", 
+            image: heribertoImg,
+            linkedin: "https://www.linkedin.com/in/heriberto-turpo-quiro/", 
+            flagCode: "PE"
+        },
+        { 
+            name: "Gabriel Franco", 
+            role: "Pitch Speaker", 
+            image: gabrielImg,
+            linkedin: "https://www.linkedin.com/in/lgab/", 
+            flagCode: "CO"
+        },
+        { 
+                flagCode: "GT",
+            role: "Backend Engineer", 
+            image: roxiImg,
+            linkedin: "https://www.linkedin.com/in/roxana-zaricell-bautista-lopez-651a5526b/", 
+            flagCode: "MX"
+        },
+        { 
+                flagCode: "MX",
+            role: "Backend Engineer", 
+            image: vaneImg,
+            linkedin: "https://www.linkedin.com/in/vanessaangulose/", 
+            flagCode: "MX"
+        },
+        { 
+                flagCode: "PE",
+            role: "Backend Engineer", 
+            image: kevinImg,
+            linkedin: "https://www.linkedin.com/in/kevin-morales-6431b72a2", 
+            flagCode: "CO"
+        },
+    ];
+                flagCode: "PE",
+    return (
+        <section className="py-24 px-6 border-t border-white/5 bg-navy-deep">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-white mb-4">Meet the Sentinels</h2>
+                    <p className="text-gray-400">Los arquitectos detrás de la predicción y los guardianes de la retención.</p>
+                flagCode: "CO",
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {team.map((member, idx) => (
+                        <Card key={idx} className="group p-6 text-center border-white/5 hover:border-neon-cyan/50 transition-colors">
+                            <div className="w-20 h-20 mx-auto rounded-full bg-white/5 mb-6 flex items-center justify-center overflow-hidden border border-white/10 group-hover:border-neon-cyan transition-colors relative">
+                                {member.image ? (
+                flagCode: "MX",
+                                ) : (
+                                    <Users className="text-gray-500 group-hover:text-neon-cyan" size={28} />
+                                )}
+                                {member.role === 'Pitch Speaker' && (
+                                    <span className="absolute -bottom-1 -right-1 p-1 rounded-full bg-white/10 border border-neon-cyan/40 text-neon-cyan shadow">
+                                        <Mic size={12} />
+                flagCode: "MX",
+                                )}
+                            </div>
+                            <h3 className="text-sm font-bold text-white leading-tight h-10 flex items-center justify-center gap-2">
+                                {member.name}
+                                {member.flagCode && <FlagIcon code={member.flagCode} />}
+                            </h3>
+                flagCode: "CO",
+                                {member.role === 'Pitch Speaker' && <Mic size={12} className="text-neon-cyan" />}
+                                <span>{member.role === 'Pitch Speaker' ? 'Data Scientist • Pitch Speaker' : member.role}</span>
+                            </p>
+                            <div className="flex justify-center gap-4 text-gray-400">
+                                {member.github && (
+                                    <a href={member.github} target="_blank" rel="noopener noreferrer">
+                                        <Github size={16} className="hover:text-white transition-colors" />
+                                    </a>
+                                )}
+                                {member.linkedin && (
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                                        <Linkedin size={16} className="hover:text-white transition-colors" />
+                                    </a>
+                                )}
+                            </div>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
 
 export function InsideTheMachineSection() {
     const [isOpen, setIsOpen] = useState(false);
@@ -243,7 +361,7 @@ export function InsideTheMachineSection() {
                                             aria-label="Organización del equipo en Monday Dev"
                                             className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:text-white hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] transition-colors bg-white/5"
                                         >
-                                            <CalendarCheck className="text-[#1F9E8A]" size={18} />
+                                            <SiMondaydotcom className="text-[#1F9E8A]" size={18} />
                                             <span className="text-sm font-medium">Organización del equipo en Monday Dev</span>
                                             <ArrowRight size={14} className="opacity-70" />
                                         </a>
